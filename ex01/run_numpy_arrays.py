@@ -21,12 +21,12 @@ def main():
     print(f"C shape: {C.shape}, content:\n{C}")
 
     print("\n---------- Now matrix multiplication of C (2,2) with B (2,) works:")
-    matmul_result = np.matmul(C, B)
+    matmul_result = np.matmul(C, B)     # C @ B also works
     print(f"Matrix multiplication result:\n{matmul_result}")
 
     print("\n---------- When adding C (2,2) and B (2,), B will be automatically "
           "broadcasted to match the shape of A.")
-    add_result = np.add(C, B)
+    add_result = np.add(C, B)   # C + B also works
     print(f"Addition result:\n{add_result}")
 
     print("\n---------- The star operator (*) will do an element-wise multiplication between C (2,2) and B (2,). "
@@ -37,7 +37,7 @@ def main():
     print(f"B as diagonal matrix:\n{np.diag(B)}")
 
     print("\n---------- Use np.transpose to transpose the C")
-    print(f"Transpose result:\n{np.transpose(C)}")
+    print(f"Transpose result:\n{np.transpose(C)}")      # C.T also works
 
 
 if __name__ == '__main__':
