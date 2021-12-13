@@ -32,7 +32,7 @@ class ConvModel(nn.Module):
         #     kernel_size 3, stride 1, padding 1, followed by another batch norm and relu.
         # 3) Averagepooling (nn.AvgPool2d) with kernel size 16, stride 16.
         # 4) Linear layer (nn.Linear) with input_features=2 * num_filters, output_features=10.
-        raise NotImplementedError
+        nn.Conv2d(input_channels, num_filters, 3, 1, 1)   # kernel_size=3, stride=1, padding=1
         # END TODO ###################
 
     def forward(self, x: th.Tensor):
